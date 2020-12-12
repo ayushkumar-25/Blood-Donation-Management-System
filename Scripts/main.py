@@ -30,7 +30,6 @@ class Login(QDialog):
         password = self.password.text()
         try:
             auth.sign_in_with_email_and_password(email, password)
-            self.loginInvalidMessage.setVisible(False)
             self.loginMessage.setVisible(True)
         except:
             self.loginInvalidMessage.setVisible(True)
