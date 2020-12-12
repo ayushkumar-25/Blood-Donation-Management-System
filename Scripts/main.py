@@ -7,7 +7,7 @@ from PyQt5.uic import loadUi
 class Login(QDialog):
     def __init__(self):
         super(Login, self).__init__()
-        loadUi(r'C:\Users\KIIT\PycharmProjects\Login\Resource\login.ui', self)
+        loadUi(r'..\Resource\login.ui', self)
         self.loginbutton.clicked.connect(self.loginfunction)
         self.createaccbutton.clicked.connect(self.gotocreate)
 
@@ -24,7 +24,7 @@ class Login(QDialog):
 class CreateAcc(QDialog):
     def __init__(self):
         super(CreateAcc, self).__init__()
-        loadUi(r'C:\Users\KIIT\PycharmProjects\Login\Resource\createacc.ui', self)
+        loadUi(r'..\Resource\createacc.ui', self)
         self.signupbutton.clicked.connect(self.createaccfunction)
 
     def createaccfunction(self):
