@@ -178,7 +178,7 @@ font-size:18px</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 0, 127); font-size:16px</string>
+    <string notr="true">color: rgb(255, 0, 0); font-size:16px</string>
    </property>
    <property name="text">
     <string>Invalid credential</string>
