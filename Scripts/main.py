@@ -34,6 +34,7 @@ class Login(QDialog):
             self.loginMessage.setVisible(True)
         except:
             self.loginInvalidMessage.setVisible(True)
+            self.loginMessage.setVisible(False)
 
     def gotocreate(self):
         createacc = CreateAcc()
