@@ -18,15 +18,16 @@ db = firebase.database()
 #     l2 = input('Enter [Name Age Sex Address]: ').split(', ')
 #     data = dict(zip(l1, l2))
 #     db.child('Users').child(l2[0]).set(data)
-users = db.child('Users').get()
-for user in users.each():
-    if user.val()['Address'] == 'Ranchi' or user.val()['Age'] == '2':
-        print(user.val()['Name'])
+# users = db.child('Users').get()
+# for user in users.each():
+#     if user.val()['Address'] == 'Ranchi' or user.val()['Age'] == '2':
+#         print(user.val()['Name'])
 # data = db.child('Users').child('Ayush Kumar').get()
 # print(data.val())
 
-# data = {'Name': 'Rohit Raj', 'Age': 21, 'Address': 'Ara'}
-# db.child("User").child('Ayush').update({'name': 'Ayush Kumar'})
+data = {'Name': 'Rohit Raj', 'Age': 21, 'Address': 'Ara'}
+#db.child("User").child('Ayush').update({'name': 'Ayush Kumar'})
+db.child("Users").child().push(data)
 # user = db.child('User').get()
 # for users in user.each():
 #     if users.val()['Name'] == 'Ayush Kumar':

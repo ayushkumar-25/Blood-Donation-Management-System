@@ -11,6 +11,7 @@ firebaseConfig = {'apiKey': "AIzaSyD-UKONeVgyG4wmi7Rym-lZYIn9CDpLI3Y",
 
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
+
 email = input('Enter Email: ')
 password = input('Enter Password: ')
 auth.create_user_with_email_and_password(email, password)
