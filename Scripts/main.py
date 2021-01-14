@@ -56,13 +56,15 @@ class CreateAcc(QDialog):
         age = self.age.text()
         bloodGroup = self.bloodGroup.currentText()
         location = self.location.currentText()
+        phoneNumber = self.phoneNo.text()
         email = self.email.text()
 
         if self.password.text() == self.confirmpass.text():
             password = self.password.text()
             try:
                 auth.create_user_with_email_and_password(email, password)
-                data = {'Name': name, 'Age': age, 'Blood Group': bloodGroup, 'Location': location}
+                data = {'Name': name, 'Age': age, 'Blood Group': bloodGroup, 'Location': location,
+                        'Phone Number': phoneNumber}
                 db.child('Users').child().push(data)
                 login = Login()
                 widget.addWidget(login)

@@ -77,6 +77,79 @@ font-size:18px</string>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
+    <item row="3" column="1">
+     <widget class="QComboBox" name="location">
+      <property name="styleSheet">
+       <string notr="true">font-size:16px; 
+background-color: rgb(197, 197, 197);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Ranchi</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Jamshedpur</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bhubaneswar</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kolkata</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 127); font-size:22px</string>
+      </property>
+      <property name="text">
+       <string>Password</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 127); font-size:22px</string>
+      </property>
+      <property name="text">
+       <string>Confirm Password</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 127); font-size:22px</string>
+      </property>
+      <property name="text">
+       <string>Email</string>
+      </property>
+     </widget>
+    </item>
     <item row="0" column="0">
      <widget class="QLabel" name="label_7">
       <property name="font">
@@ -92,13 +165,18 @@ font-size:18px</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="name">
-      <property name="styleSheet">
-       <string notr="true">color:rgb(225, 225, 225); font-size:16px</string>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
       </property>
-      <property name="cursorMoveStyle">
-       <enum>Qt::LogicalMoveStyle</enum>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 127); font-size:22px</string>
+      </property>
+      <property name="text">
+       <string>Location</string>
       </property>
      </widget>
     </item>
@@ -130,18 +208,23 @@ font-size:18px</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label_5">
-      <property name="font">
-       <font>
-        <pointsize>-1</pointsize>
-       </font>
-      </property>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="name">
       <property name="styleSheet">
-       <string notr="true">color: rgb(255, 0, 127); font-size:22px</string>
+       <string notr="true">color:rgb(225, 225, 225); font-size:16px</string>
       </property>
-      <property name="text">
-       <string>Blood Group</string>
+      <property name="cursorMoveStyle">
+       <enum>Qt::LogicalMoveStyle</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLineEdit" name="email">
+      <property name="styleSheet">
+       <string notr="true">color:rgb(225, 225, 225); font-size:16px</string>
+      </property>
+      <property name="cursorMoveStyle">
+       <enum>Qt::LogicalMoveStyle</enum>
       </property>
      </widget>
     </item>
@@ -193,113 +276,7 @@ background-color: rgb(197, 197, 197);</string>
       </item>
      </widget>
     </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label_6">
-      <property name="font">
-       <font>
-        <pointsize>-1</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 0, 127); font-size:22px</string>
-      </property>
-      <property name="text">
-       <string>Location</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QComboBox" name="location">
-      <property name="styleSheet">
-       <string notr="true">font-size:16px; 
-background-color: rgb(197, 197, 197);</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Ranchi</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Bhubaneswar</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Kolkata</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="font">
-       <font>
-        <pointsize>-1</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 0, 127); font-size:22px</string>
-      </property>
-      <property name="text">
-       <string>Email</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QLineEdit" name="email">
-      <property name="styleSheet">
-       <string notr="true">color:rgb(225, 225, 225); font-size:16px</string>
-      </property>
-      <property name="cursorMoveStyle">
-       <enum>Qt::LogicalMoveStyle</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QLabel" name="label_3">
-      <property name="font">
-       <font>
-        <pointsize>-1</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 0, 127); font-size:22px</string>
-      </property>
-      <property name="text">
-       <string>Password</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QLineEdit" name="password">
-      <property name="styleSheet">
-       <string notr="true">color:rgb(225, 225, 225); font-size:16px</string>
-      </property>
-      <property name="inputMethodHints">
-       <set>Qt::ImhNone</set>
-      </property>
-      <property name="echoMode">
-       <enum>QLineEdit::Normal</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <widget class="QLabel" name="label_4">
-      <property name="font">
-       <font>
-        <pointsize>-1</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 0, 127); font-size:22px</string>
-      </property>
-      <property name="text">
-       <string>Confirm Password</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="1">
+    <item row="7" column="1">
      <widget class="QLineEdit" name="confirmpass">
       <property name="styleSheet">
        <string notr="true">color:rgb(225, 225, 225); font-size:16px</string>
@@ -312,6 +289,59 @@ background-color: rgb(197, 197, 197);</string>
       </property>
      </widget>
     </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 127); font-size:22px</string>
+      </property>
+      <property name="text">
+       <string>Blood Group</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLineEdit" name="password">
+      <property name="styleSheet">
+       <string notr="true">color:rgb(225, 225, 225); font-size:16px</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Normal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_9">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 127); font-size:22px</string>
+      </property>
+      <property name="text">
+       <string>Phone Number</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="phoneNo">
+      <property name="styleSheet">
+       <string notr="true">color:rgb(225, 225, 225); font-size:16px</string>
+      </property>
+      <property name="cursorMoveStyle">
+       <enum>Qt::LogicalMoveStyle</enum>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
  </widget>
@@ -320,6 +350,7 @@ background-color: rgb(197, 197, 197);</string>
   <tabstop>age</tabstop>
   <tabstop>bloodGroup</tabstop>
   <tabstop>location</tabstop>
+  <tabstop>phoneNo</tabstop>
   <tabstop>email</tabstop>
   <tabstop>password</tabstop>
   <tabstop>confirmpass</tabstop>
