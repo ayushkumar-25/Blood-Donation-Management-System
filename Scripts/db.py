@@ -28,6 +28,8 @@ db = firebase.database()
 data = {'Name': 'Rohit Raj', 'Age': 21, 'Address': 'Ara'}
 #db.child("User").child('Ayush').update({'name': 'Ayush Kumar'})
 db.child("Users").child().push(data)
+#data = {'Name': 'name', 'Age': 'age', 'Blood Group': 'bloodGroup', 'Location': 'location'}
+#db.child('Users').child('email').push(data)
 # user = db.child('User').get()
 # for users in user.each():
 #     if users.val()['Name'] == 'Ayush Kumar':

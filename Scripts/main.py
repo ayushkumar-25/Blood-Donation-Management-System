@@ -15,6 +15,7 @@ firebaseConfig = {'apiKey': "AIzaSyD-UKONeVgyG4wmi7Rym-lZYIn9CDpLI3Y",
 
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
+db = firebase.database()
 
 
 class Login(QDialog):
@@ -51,16 +52,25 @@ class CreateAcc(QDialog):
         self.invalid.setVisible(False)
 
     def createaccfunction(self):
+        name = self.name.text()
+        age = self.age.text()
+        bloodGroup = self.bloodGroup.currentText()
+        location = self.location.currentText()
         email = self.email.text()
+
         if self.password.text() == self.confirmpass.text():
             password = self.password.text()
             try:
                 auth.create_user_with_email_and_password(email, password)
+                data = {'Name': name, 'Age': age, 'Blood Group': bloodGroup, 'Location': location}
+                db.child('Users').child().push(data)
                 login = Login()
                 widget.addWidget(login)
                 widget.setCurrentIndex(widget.currentIndex() + 1)
             except:
                 self.invalid.setVisible(True)
+        else:
+            self.invalid.setVisible(True)
 
 
 app = QApplication(sys.argv)
