@@ -12,7 +12,13 @@ class CreateAcc(QDialog):
         super(CreateAcc, self).__init__()
         loadUi(r'..\Resource\createacc.ui', self)
         self.signupbutton.clicked.connect(self.createaccfunction)
+        self.backButton.clicked.connect(self.backtoHome)
         self.invalid.setVisible(False)
+
+    def backtoHome(self):
+        login = m.Login()
+        m.widget.addWidget(login)
+        m.widget.setCurrentIndex(m.widget.currentIndex() + 1)
 
     def createaccfunction(self):
         name = self.name.text()

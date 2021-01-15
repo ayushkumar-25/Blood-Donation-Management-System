@@ -67,6 +67,24 @@ font-size:18px</string>
     <string>Invalid credential</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="backButton">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(167, 168, 167); 
+color: rgb(255, 255, 255);
+font-size:18px</string>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
   <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
