@@ -82,6 +82,11 @@ font-size:18px</string>
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>myprofileButton</tabstop>
+  <tabstop>requestbloodButton</tabstop>
+  <tabstop>signoutButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
