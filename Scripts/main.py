@@ -4,6 +4,9 @@ from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.uic import loadUi
 import pyrebase
 
+import home as h
+import createacc as acc
+
 firebaseConfig = {'apiKey': "AIzaSyD-UKONeVgyG4wmi7Rym-lZYIn9CDpLI3Y",
                   'authDomain': "fir-auth-ddfd6.firebaseapp.com",
                   'databaseURL': "https://fir-auth-ddfd6-default-rtdb.firebaseio.com/",
@@ -32,47 +35,22 @@ class Login(QDialog):
         password = self.password.text()
         try:
             auth.sign_in_with_email_and_password(email, password)
-            self.loginInvalidMessage.setVisible(False)
-            self.loginMessage.setVisible(True)
+            self.gotoHome()
+            # self.loginInvalidMessage.setVisible(False)
+            # self.loginMessage.setVisible(True)
         except:
             self.loginInvalidMessage.setVisible(True)
             self.loginMessage.setVisible(False)
 
     def gotocreate(self):
-        createacc = CreateAcc()
+        createacc = acc.CreateAcc()
         widget.addWidget(createacc)
         widget.setCurrentIndex(widget.currentIndex() + 1)
 
-
-class CreateAcc(QDialog):
-    def __init__(self):
-        super(CreateAcc, self).__init__()
-        loadUi(r'..\Resource\createacc.ui', self)
-        self.signupbutton.clicked.connect(self.createaccfunction)
-        self.invalid.setVisible(False)
-
-    def createaccfunction(self):
-        name = self.name.text()
-        age = self.age.text()
-        bloodGroup = self.bloodGroup.currentText()
-        location = self.location.currentText()
-        phoneNumber = self.phoneNo.text()
-        email = self.email.text()
-
-        if self.password.text() == self.confirmpass.text():
-            password = self.password.text()
-            try:
-                auth.create_user_with_email_and_password(email, password)
-                data = {'Name': name, 'Age': age, 'Blood Group': bloodGroup, 'Location': location,
-                        'Phone Number': phoneNumber}
-                db.child('Users').child().push(data)
-                login = Login()
-                widget.addWidget(login)
-                widget.setCurrentIndex(widget.currentIndex() + 1)
-            except:
-                self.invalid.setVisible(True)
-        else:
-            self.invalid.setVisible(True)
+    def gotoHome(self):
+        home = h.Home()
+        widget.addWidget(home)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
 
 
 app = QApplication(sys.argv)
