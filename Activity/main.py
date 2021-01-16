@@ -40,6 +40,7 @@ class Login(QDialog):
             self.gotoHome()
             # self.loginInvalidMessage.setVisible(False)
             # self.loginMessage.setVisible(True)
+
         except:
             self.loginInvalidMessage.setVisible(True)
             self.loginMessage.setVisible(False)
@@ -63,11 +64,11 @@ class Login(QDialog):
 app = QApplication(sys.argv)  # create pyqt5 app
 mainwindow = Login()  # create the instance of our Window
 widget = QtWidgets.QStackedWidget()
-widget.setWindowTitle('Blood Bank')
-widget.setWindowIcon(QtGui.QIcon(r'..\Resource\icon.jpg'))
 widget.addWidget(mainwindow)
 widget.setFixedWidth(480)
 widget.setFixedHeight(620)
+widget.setWindowTitle('Blood Bank')
+widget.setWindowIcon(QtGui.QIcon(r'..\Resource\icon.jpg'))
 widget.show()  # show all the widgets
-sys.exit(app.exec())  # start the app
-# app.exec_()
+sys.exit(app.exec_())  # start the app
+#app.exec_()
