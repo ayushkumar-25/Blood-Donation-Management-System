@@ -51,6 +51,154 @@ color: rgb(225, 225, 225);</string>
     <string>Request Blood</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>292</y>
+     <width>174</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 0, 127); font-size:22px</string>
+   </property>
+   <property name="text">
+    <string>Location</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="bloodGroup">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>242</y>
+     <width>239</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size:16px; 
+background-color: rgb(197, 197, 197);</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>A+</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>B+</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>AB+</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>O+</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>A-</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>B-</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>AB-</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>O-</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="location">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>294</y>
+     <width>239</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size:16px; 
+background-color: rgb(197, 197, 197);</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Ranchi</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Jamshedpur</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bhubaneswar</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kolkata</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>240</y>
+     <width>174</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 0, 127); font-size:22px</string>
+   </property>
+   <property name="text">
+    <string>Blood Group</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="requestbutton">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>370</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(167, 168, 167); 
+color: rgb(255, 255, 255);
+font-size:18px</string>
+   </property>
+   <property name="text">
+    <string>Request</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
