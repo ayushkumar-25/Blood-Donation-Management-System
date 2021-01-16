@@ -11,7 +11,17 @@ firebaseConfig = {'apiKey': "AIzaSyD-UKONeVgyG4wmi7Rym-lZYIn9CDpLI3Y",
 
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
-auth.send_password_reset_email('ayush2608@gmail.com')
-# email = input('Enter Email: ')
-# password = input('Enter Password: ')
-# auth.create_user_with_email_and_password(email, password)
+#auth.send_password_reset_email('ayush2608@gmail.com')
+email = input('Enter Email: ')
+password = input('Enter Password: ')
+#auth.create_user_with_email_and_password(email, password)
+user = auth.sign_in_with_email_and_password(email, password)
+
+info = dict(auth.get_account_info(user['idToken']))
+# for k in info:
+#     print(k)
+
+print(info)
+#print(type(info))
+#auth.send_email_verification(user['idToken'])
+
