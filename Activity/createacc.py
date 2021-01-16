@@ -29,7 +29,7 @@ class CreateAcc(QDialog):
         location = self.location.currentText()
         phoneNumber = self.phoneNo.text()
         email = self.email.text()
-        if (len(name) != 0 and len(age) != 0):
+        if len(name) != 0 and len(age) != 0:
             if self.password.text() == self.confirmpass.text():
                 password = self.password.text()
                 if len(password) >= 6:
@@ -59,4 +59,3 @@ class CreateAcc(QDialog):
         else:
             self.invalid.setText('Please enter valid Name and Age.')
             self.invalid.setVisible(True)
-
