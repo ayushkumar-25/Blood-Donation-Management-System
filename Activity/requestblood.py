@@ -21,9 +21,27 @@ class RequestBlood(QDialog):
         m.widget.setCurrentIndex(m.widget.currentIndex() + 1)
 
     def bloodRequest(self):
+        global g
         bloodGroup = self.bloodGroup.currentText()
+        if bloodGroup == 'A+':
+            g = ['A+', 'A-', 'O+', 'O-']
+        if bloodGroup == 'O+':
+            g = ['O+', 'O-']
+        if bloodGroup == 'B+':
+            g = ['B+', 'B-', 'O+', 'O-']
+        if bloodGroup == 'AB+':
+            g = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']
+        if bloodGroup == 'A-':
+            g = ['A-', 'O-']
+        if bloodGroup == 'O-':
+            g = ['O-']
+        if bloodGroup == 'B-':
+            g = ['B-', 'O-']
+        if bloodGroup == 'AB-':
+            g = ['AB-', 'A-', 'O-', 'B-']
         location = self.location.currentText()
         users = m.db.child('Users').get()
         for user in users.each():
-            if user.val()['Blood Group'] == bloodGroup and user.val()['Location'] == location:
-                print(user.val())
+            for i in g:
+                if user.val()['Blood Group'] == i and user.val()['Location'] == location:
+                    print(user.val())
