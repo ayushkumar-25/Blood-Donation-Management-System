@@ -54,7 +54,7 @@ color: rgb(225, 225, 225);</string>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>292</y>
      <width>174</width>
      <height>27</height>
@@ -75,9 +75,9 @@ color: rgb(225, 225, 225);</string>
   <widget class="QComboBox" name="bloodGroup">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>238</x>
      <y>242</y>
-     <width>239</width>
+     <width>221</width>
      <height>23</height>
     </rect>
    </property>
@@ -129,9 +129,9 @@ background-color: rgb(197, 197, 197);</string>
   <widget class="QComboBox" name="location">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>238</x>
      <y>294</y>
-     <width>239</width>
+     <width>221</width>
      <height>23</height>
     </rect>
    </property>
@@ -163,9 +163,9 @@ background-color: rgb(197, 197, 197);</string>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>240</y>
-     <width>174</width>
+     <width>211</width>
      <height>27</height>
     </rect>
    </property>
@@ -178,7 +178,7 @@ background-color: rgb(197, 197, 197);</string>
     <string notr="true">color: rgb(255, 0, 127); font-size:22px</string>
    </property>
    <property name="text">
-    <string>Blood Group</string>
+    <string>Patient's Blood Group</string>
    </property>
   </widget>
   <widget class="QPushButton" name="requestbutton">
