@@ -6,6 +6,7 @@ import pyrebase
 
 import home as h
 import createacc as acc
+import resetpass as req
 
 firebaseConfig = {'apiKey': "AIzaSyD-UKONeVgyG4wmi7Rym-lZYIn9CDpLI3Y",
                   'authDomain': "fir-auth-ddfd6.firebaseapp.com",
@@ -27,6 +28,7 @@ class Login(QDialog):
         loadUi(r'..\Resource\login.ui', self)
         self.loginbutton.clicked.connect(self.loginfunction)
         self.createaccbutton.clicked.connect(self.gotocreate)
+        self.forgetPassButton.clicked.connect(self.gotoReset)
         self.loginInvalidMessage.setVisible(False)
         self.loginMessage.setVisible(False)
 
@@ -50,6 +52,11 @@ class Login(QDialog):
     def gotoHome(self):
         home = h.Home()
         widget.addWidget(home)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+
+    def gotoReset(self):
+        reset = req.ResetPass()
+        widget.addWidget(reset)
         widget.setCurrentIndex(widget.currentIndex() + 1)
 
 

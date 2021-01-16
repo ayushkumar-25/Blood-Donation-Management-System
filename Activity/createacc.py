@@ -5,6 +5,7 @@ from PyQt5.uic import loadUi
 import pyrebase
 
 import main as m
+import home as h
 
 
 class CreateAcc(QDialog):
@@ -22,6 +23,7 @@ class CreateAcc(QDialog):
 
     def createaccfunction(self):
         name = self.name.text()
+        name = name.title()
         age = self.age.text()
         bloodGroup = self.bloodGroup.currentText()
         location = self.location.currentText()
@@ -35,8 +37,10 @@ class CreateAcc(QDialog):
                 data = {'Name': name, 'Age': age, 'Blood Group': bloodGroup, 'Location': location,
                         'Phone Number': phoneNumber}
                 m.db.child('Users').child().push(data)
-                login = m.Login()
-                m.widget.addWidget(login)
+                # m.auth.sign_in_with_email_and_password(email, password)
+                home = h.Home()
+                # login = m.Login()
+                m.widget.addWidget(home)
                 m.widget.setCurrentIndex(m.widget.currentIndex() + 1)
             except:
                 self.invalid.setVisible(True)
