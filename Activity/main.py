@@ -1,5 +1,5 @@
 import sys
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.uic import loadUi
 import pyrebase
@@ -60,11 +60,14 @@ class Login(QDialog):
         widget.setCurrentIndex(widget.currentIndex() + 1)
 
 
-app = QApplication(sys.argv)
-mainwindow = Login()
+app = QApplication(sys.argv)  # create pyqt5 app
+mainwindow = Login()  # create the instance of our Window
 widget = QtWidgets.QStackedWidget()
+widget.setWindowTitle('Blood Bank')
+widget.setWindowIcon(QtGui.QIcon(r'..\Resource\icon.jpg'))
 widget.addWidget(mainwindow)
 widget.setFixedWidth(480)
 widget.setFixedHeight(620)
-widget.show()
-app.exec_()
+widget.show()  # show all the widgets
+sys.exit(app.exec())  # start the app
+# app.exec_()
