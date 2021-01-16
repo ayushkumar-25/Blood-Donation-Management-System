@@ -14,10 +14,10 @@ db = firebase.database()
 
 # n = int(input('Enter number of data entry: '))
 # for i in range(n):
-#     l1 = ['Name', 'Age', 'Sex', 'Address']
-#     l2 = input('Enter [Name Age Sex Address]: ').split(', ')
+#     l1 = ['Name', 'Blood Group', 'Location']
+#     l2 = input('Enter [Name, Blood Group, Location]: ').split(', ')
 #     data = dict(zip(l1, l2))
-#     db.child('Users').child(l2[0]).set(data)
+#     db.child('Users').child().push(data)
 # users = db.child('Users').get()
 # for user in users.each():
 #     if user.val()['Address'] == 'Ranchi' or user.val()['Age'] == '2':
@@ -25,9 +25,9 @@ db = firebase.database()
 # data = db.child('Users').child('Ayush Kumar').get()
 # print(data.val())
 
-data = {'Name': 'Rohit Raj', 'Age': 21, 'Address': 'Ara'}
-#db.child("User").child('Ayush').update({'name': 'Ayush Kumar'})
-db.child("Users").child().push(data)
+# data = {'Name': 'Rohit Raj', 'Age': 21, 'Address': 'Ara'}
+# #db.child("User").child('Ayush').update({'name': 'Ayush Kumar'})
+# db.child("Users").child().push(data)
 #data = {'Name': 'name', 'Age': 'age', 'Blood Group': 'bloodGroup', 'Location': 'location'}
 #db.child('Users').child('email').push(data)
 # user = db.child('User').get()
@@ -36,3 +36,11 @@ db.child("Users").child().push(data)
 #         db.child('User').child(users.key()).update({'name': None})
 
 # db.child('User').remove()
+l = ['A+', 'A-', 'O+', 'O-']
+users = db.child('Users').get()
+#print(users.val())
+for user in users.each():
+    #print(user.val())
+    for i in l:
+        if user.val()['Blood Group'] == i and user.val()['Location'] == "Ranchi":
+            print(user.val())
