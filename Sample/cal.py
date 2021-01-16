@@ -1,6 +1,6 @@
 import sys
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QDialog, QApplication
+from PyQt5.QtWidgets import QDialog, QApplication, QLabel
 from PyQt5.uic import loadUi
 
 
@@ -9,6 +9,8 @@ class Front(QDialog):
         super(Front, self).__init__()
         loadUi('front.ui', self)
         self.pushButton.clicked.connect(self.add)
+        self.label_3.setText('xyz')
+        #self.label_3.setVisible(True)
 
     def add(self):
         num1 = int(self.lineEdit_1.text())
