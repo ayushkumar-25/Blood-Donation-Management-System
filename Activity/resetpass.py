@@ -7,6 +7,7 @@ import pyrebase
 import main as m
 import home as h
 
+
 class ResetPass(QDialog):
     def __init__(self):
         super(ResetPass, self).__init__()
@@ -30,4 +31,3 @@ class ResetPass(QDialog):
         login = m.Login()
         m.widget.addWidget(login)
         m.widget.setCurrentIndex(m.widget.currentIndex() + 1)
-

@@ -7,6 +7,7 @@ import pyrebase
 import main as m
 import home as h
 
+
 class RequestBlood(QDialog):
     def __init__(self):
         super(RequestBlood, self).__init__()
