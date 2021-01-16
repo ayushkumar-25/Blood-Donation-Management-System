@@ -45,4 +45,5 @@ class CreateAcc(QDialog):
             except:
                 self.invalid.setVisible(True)
         else:
+            self.invalid.setText('Password not Matching.')
             self.invalid.setVisible(True)
