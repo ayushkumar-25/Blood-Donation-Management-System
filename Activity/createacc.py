@@ -38,7 +38,7 @@ class CreateAcc(QDialog):
                             m.auth.create_user_with_email_and_password(email, password)
                             data = {'Name': name, 'Age': age, 'Blood Group': bloodGroup, 'Location': location,
                                     'Phone Number': phoneNumber}
-                            m.db.child('Users').child().set(data)
+                            m.db.child('Users').child().push(data)
                             # m.auth.sign_in_with_email_and_password(email, password)
                             home = h.Home()
                             # login = m.Login()
