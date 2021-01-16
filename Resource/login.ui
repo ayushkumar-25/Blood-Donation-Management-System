@@ -181,9 +181,9 @@ color: rgb(225, 225, 225);</string>
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>500</y>
+     <y>488</y>
      <width>174</width>
-     <height>99</height>
+     <height>111</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -244,6 +244,13 @@ font-size: 20px</string>
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>email</tabstop>
+  <tabstop>password</tabstop>
+  <tabstop>loginbutton</tabstop>
+  <tabstop>forgetPassButton</tabstop>
+  <tabstop>createaccbutton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
