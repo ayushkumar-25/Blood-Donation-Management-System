@@ -29,21 +29,34 @@ class CreateAcc(QDialog):
         location = self.location.currentText()
         phoneNumber = self.phoneNo.text()
         email = self.email.text()
-
-        if self.password.text() == self.confirmpass.text():
-            password = self.password.text()
-            try:
-                m.auth.create_user_with_email_and_password(email, password)
-                data = {'Name': name, 'Age': age, 'Blood Group': bloodGroup, 'Location': location,
-                        'Phone Number': phoneNumber}
-                m.db.child('Users').child(phoneNumber).set(data)
-                # m.auth.sign_in_with_email_and_password(email, password)
-                home = h.Home()
-                # login = m.Login()
-                m.widget.addWidget(home)
-                m.widget.setCurrentIndex(m.widget.currentIndex() + 1)
-            except:
+        if (len(name) != 0 and len(age) != 0):
+            if self.password.text() == self.confirmpass.text():
+                password = self.password.text()
+                if len(password) >= 6:
+                    if len(phoneNumber) == 10:
+                        try:
+                            m.auth.create_user_with_email_and_password(email, password)
+                            data = {'Name': name, 'Age': age, 'Blood Group': bloodGroup, 'Location': location,
+                                    'Phone Number': phoneNumber}
+                            m.db.child('Users').child(name+password).set(data)
+                            # m.auth.sign_in_with_email_and_password(email, password)
+                            home = h.Home()
+                            # login = m.Login()
+                            m.widget.addWidget(home)
+                            m.widget.setCurrentIndex(m.widget.currentIndex() + 1)
+                        except:
+                            self.invalid.setText('Please enter valid email.')
+                            self.invalid.setVisible(True)
+                    else:
+                        self.invalid.setText('Please enter valid phone number.')
+                        self.invalid.setVisible(True)
+                else:
+                    self.invalid.setText('Password must have min 6 letters.')
+                    self.invalid.setVisible(True)
+            else:
+                self.invalid.setText('Password not Matching.')
                 self.invalid.setVisible(True)
         else:
-            self.invalid.setText('Password not Matching.')
+            self.invalid.setText('Please enter valid Name and Age.')
             self.invalid.setVisible(True)
+
