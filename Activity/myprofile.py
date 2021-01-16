@@ -7,6 +7,7 @@ import pyrebase
 import main as m
 import home as h
 
+
 class MyProfile(QDialog):
     def __init__(self):
         super(MyProfile, self).__init__()
