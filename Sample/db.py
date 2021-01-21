@@ -1,3 +1,7 @@
+import sys
+from PyQt5 import QtWidgets, QtGui
+from PyQt5.QtWidgets import QDialog, QApplication
+from PyQt5.uic import loadUi
 import pyrebase
 
 firebaseConfig = {'apiKey': "AIzaSyD-UKONeVgyG4wmi7Rym-lZYIn9CDpLI3Y",
@@ -11,7 +15,16 @@ firebaseConfig = {'apiKey': "AIzaSyD-UKONeVgyG4wmi7Rym-lZYIn9CDpLI3Y",
 
 firebase = pyrebase.initialize_app(firebaseConfig)
 db = firebase.database()
+l = ['A+', 'A-', 'O+', 'O-']
+users = db.child('Users').child().get()
+for user in users.each():
+    #for i in l:
+        if user.val()['Blood Group'] == 'A+' and user.val()['Location'] == 'Ranchi':
+            print(user.val())
 
+
+#
+#
 # n = int(input('Enter number of data entry: '))
 # for i in range(n):
 #     l1 = ['Name', 'Blood Group', 'Location']
@@ -24,23 +37,16 @@ db = firebase.database()
 #         print(user.val()['Name'])
 # data = db.child('Users').child('Ayush Kumar').get()
 # print(data.val())
-
+#
 # data = {'Name': 'Rohit Raj', 'Age': 21, 'Address': 'Ara'}
 # #db.child("User").child('Ayush').update({'name': 'Ayush Kumar'})
 # db.child("Users").child().push(data)
-#data = {'Name': 'name', 'Age': 'age', 'Blood Group': 'bloodGroup', 'Location': 'location'}
-#db.child('Users').child('email').push(data)
+# data = {'Name': 'name', 'Age': 'age', 'Blood Group': 'bloodGroup', 'Location': 'location'}
+# db.child('Users').child('email').push(data)
 # user = db.child('User').get()
 # for users in user.each():
 #     if users.val()['Name'] == 'Ayush Kumar':
 #         db.child('User').child(users.key()).update({'name': None})
-
+#
 # db.child('User').remove()
-l = ['A+', 'A-', 'O+', 'O-']
-users = db.child('Users').get()
-#print(users.val())
-for user in users.each():
-    #print(user.val())
-    for i in l:
-        if user.val()['Blood Group'] == i and user.val()['Location'] == "Ranchi":
-            print(user.val())
+
