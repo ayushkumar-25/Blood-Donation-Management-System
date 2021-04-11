@@ -9,21 +9,21 @@ import home as h
 
 
 class MyProfile(QDialog):
-    global data
+    global datum
 
     def __init__(self):
-        global data
+        global datum
         super(MyProfile, self).__init__()
         loadUi(r'..\Resource\myprofile.ui', self)
         self.backButton.clicked.connect(self.backtoHome)
         user = m.db.child('Users').get()
         for users in user.each():
             if users.val()['id'] == m.id:
-                data = [users.val()]
+                datum = [users.val()]
 
         row = 0
-        self.tableWidget.setRowCount(len(data))
-        for person in data:
+        self.tableWidget.setRowCount(len(datum))
+        for person in datum:
             self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem(person['Name']))
             self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(person['Age']))
             self.tableWidget.setItem(row, 2, QtWidgets.QTableWidgetItem(person['Blood Group']))
