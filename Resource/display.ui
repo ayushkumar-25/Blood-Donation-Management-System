@@ -19,7 +19,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>180</x>
      <y>90</y>
      <width>171</width>
      <height>61</height>
@@ -30,7 +30,7 @@
 color: rgb(225, 225, 225);</string>
    </property>
    <property name="text">
-    <string>My Profile</string>
+    <string>Donors</string>
    </property>
   </widget>
   <widget class="QPushButton" name="backButton">
@@ -57,7 +57,7 @@ font-size:18px</string>
      <x>20</x>
      <y>220</y>
      <width>451</width>
-     <height>161</height>
+     <height>181</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -75,7 +75,7 @@ font-size:18px</string>
       <x>0</x>
       <y>0</y>
       <width>451</width>
-      <height>161</height>
+      <height>181</height>
      </rect>
     </property>
     <property name="styleSheet">

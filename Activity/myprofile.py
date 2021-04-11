@@ -9,10 +9,27 @@ import home as h
 
 
 class MyProfile(QDialog):
+    global data
+
     def __init__(self):
+        global data
         super(MyProfile, self).__init__()
         loadUi(r'..\Resource\myprofile.ui', self)
         self.backButton.clicked.connect(self.backtoHome)
+        user = m.db.child('Users').get()
+        for users in user.each():
+            if users.val()['id'] == m.id:
+                data = [users.val()]
+
+        row = 0
+        self.tableWidget.setRowCount(len(data))
+        for person in data:
+            self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem(person['Name']))
+            self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(person['Age']))
+            self.tableWidget.setItem(row, 2, QtWidgets.QTableWidgetItem(person['Blood Group']))
+            self.tableWidget.setItem(row, 3, QtWidgets.QTableWidgetItem(person['Location']))
+            self.tableWidget.setItem(row, 4, QtWidgets.QTableWidgetItem(person['Phone Number']))
+            row = row + 1
 
     def backtoHome(self):
         home = h.Home()

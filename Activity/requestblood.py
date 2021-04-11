@@ -6,6 +6,7 @@ import pyrebase
 
 import main as m
 import home as h
+import display as d
 
 
 class RequestBlood(QDialog):
@@ -21,6 +22,9 @@ class RequestBlood(QDialog):
         m.widget.setCurrentIndex(m.widget.currentIndex() + 1)
 
     def bloodRequest(self):
+        display = d.Display()
+        m.widget.addWidget(display)
+        m.widget.setCurrentIndex(m.widget.currentIndex() + 1)
         global g
         bloodGroup = self.bloodGroup.currentText()
         if bloodGroup == 'A+':
