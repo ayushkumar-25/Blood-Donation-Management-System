@@ -51,6 +51,7 @@ src="https://github.com/ayushkumar-25/Blood-Donation-Management-System/blob/main
 #
 
 **Get me on:** <br>
+[![](https://img.shields.io/badge/LinkedIn-ayushkumar25-blue?logo=Linkedin&logoColor=blue&labelColor=black)](https://www.linkedin.com/in/ayushkumar25/)
 [![](https://img.shields.io/badge/Gmail-ayush2608%40gmail.com-red?logo=Gmail&logoColor=Red&labelColor=black)](mailto:ayush2608@gmail.com)
 [![](https://img.shields.io/badge/Telegram-ayushkumar25-blue?logo=Telegram&labelColor=black)](https://t.me/ayushkumar25) <br>
 
