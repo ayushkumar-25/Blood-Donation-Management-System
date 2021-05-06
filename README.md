@@ -20,6 +20,7 @@ Included:
 - Firebase Authentication
 - Python3x
 - PyCharm IDE
+- Qt Designer
 
 ### Preview:
 <img src="https://github.com/ayushkumar-25/Blood-Donation-Management-System/blob/main/UI/createacc.png?raw=true" alt="Splash Screen" width="200" height="300"/> <img
