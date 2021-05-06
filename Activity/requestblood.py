@@ -6,6 +6,7 @@ import pyrebase
 
 import main as m
 import home as h
+import display as d
 
 
 class RequestBlood(QDialog):
@@ -22,6 +23,8 @@ class RequestBlood(QDialog):
 
     def bloodRequest(self):
         global g
+        global lis
+        lis = []
         bloodGroup = self.bloodGroup.currentText()
         if bloodGroup == 'A+':
             g = ['A+', 'A-', 'O+', 'O-']
@@ -44,4 +47,9 @@ class RequestBlood(QDialog):
         for user in users.each():
             for i in g:
                 if user.val()['Blood Group'] == i and user.val()['Location'] == location:
-                    print(user.val())
+                    lis.append(user.val())
+                    # print(user.val())
+
+        display = d.Display()
+        m.widget.addWidget(display)
+        m.widget.setCurrentIndex(m.widget.currentIndex() + 1)

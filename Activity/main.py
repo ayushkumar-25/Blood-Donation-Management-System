@@ -6,7 +6,7 @@ import pyrebase
 
 import home as h
 import createacc as acc
-import resetpass as req
+import resetpass as res
 
 firebaseConfig = {'apiKey': "AIzaSyD-UKONeVgyG4wmi7Rym-lZYIn9CDpLI3Y",
                   'authDomain': "fir-auth-ddfd6.firebaseapp.com",
@@ -33,10 +33,12 @@ class Login(QDialog):
         self.loginMessage.setVisible(False)
 
     def loginfunction(self):
+        global id
         email = self.email.text()
         password = self.password.text()
         try:
-            auth.sign_in_with_email_and_password(email, password)
+            user = auth.sign_in_with_email_and_password(email, password)
+            id = user['localId']
             self.gotoHome()
             # self.loginInvalidMessage.setVisible(False)
             # self.loginMessage.setVisible(True)
@@ -56,7 +58,7 @@ class Login(QDialog):
         widget.setCurrentIndex(widget.currentIndex() + 1)
 
     def gotoReset(self):
-        reset = req.ResetPass()
+        reset = res.ResetPass()
         widget.addWidget(reset)
         widget.setCurrentIndex(widget.currentIndex() + 1)
 
@@ -69,6 +71,7 @@ widget.setFixedWidth(480)
 widget.setFixedHeight(620)
 widget.setWindowTitle('Blood Bank')
 widget.setWindowIcon(QtGui.QIcon(r'..\Resource\icon.jpg'))
+# app.setStyle(QtWidgets.QStyleFactory.create('Fusion'))
 widget.show()  # show all the widgets
 sys.exit(app.exec_())  # start the app
 #app.exec_()

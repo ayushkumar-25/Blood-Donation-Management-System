@@ -28,9 +28,13 @@ class Table(QDialog):
         # for user in users.each():
         #     if user.val()['Blood Group'] == 'A+' and user.val()['Location'] == 'Ranchi':
         #         data = (user.val())
-        data = [{'Age': '22', 'Blood Group': 'A+', 'Location': 'Kolkata', 'Name': 'Rahul',
-                 'Phone Number': '9708942540'},
-                {'Age': '32', 'Blood Group': 'O+', 'Location': 'Ranchi', 'Name': 'Aman', 'Phone Number': '1234567890'}]
+        # data = [{'Age': '22', 'Blood Group': 'A+', 'Location': 'Kolkata', 'Name': 'Rahul',
+        #          'Phone Number': '9708942540'},
+        #         {'Age': '32', 'Blood Group': 'O+', 'Location': 'Ranchi', 'Name': 'Aman', 'Phone Number': '1234567890'}]
+        data = [{'Age': '22', 'Blood Group': 'A+', 'Location': 'Ranchi', 'Name': 'Ayush Kumar',
+                 'Phone Number': '9708943540', 'id': 'YSAaSlDDs9eL0k8qAOZuYwoGXg32'},
+                {'Age': '16', 'Blood Group': 'A+', 'Location': 'Ranchi', 'Name': 'Hiya', 'Phone Number': '1234567890',
+                 'id': 'PF2x92c1CKWJCe1FWCvg4Z37bx32'}]
         row = 0
         self.tableWidget.setRowCount(len(data))
         for person in data:

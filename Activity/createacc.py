@@ -35,14 +35,15 @@ class CreateAcc(QDialog):
                 if len(password) >= 6:
                     if len(phoneNumber) == 10:
                         try:
-                            m.auth.create_user_with_email_and_password(email, password)
+                            user = m.auth.create_user_with_email_and_password(email, password)
+                            id = user['localId']
                             data = {'Name': name, 'Age': age, 'Blood Group': bloodGroup, 'Location': location,
-                                    'Phone Number': phoneNumber}
+                                    'Phone Number': phoneNumber, 'id': id}
                             m.db.child('Users').child().push(data)
                             # m.auth.sign_in_with_email_and_password(email, password)
-                            home = h.Home()
-                            # login = m.Login()
-                            m.widget.addWidget(home)
+                            # home = h.Home()
+                            login = m.Login()
+                            m.widget.addWidget(login)
                             m.widget.setCurrentIndex(m.widget.currentIndex() + 1)
                         except:
                             self.invalid.setText('Please enter valid email.')

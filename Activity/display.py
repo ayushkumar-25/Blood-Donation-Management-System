@@ -4,26 +4,23 @@ from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.uic import loadUi
 import pyrebase
 
+import requestblood as req
 import main as m
-import home as h
 
 
-class MyProfile(QDialog):
-    global datum
-
+class Display(QDialog):
     def __init__(self):
-        global datum
-        super(MyProfile, self).__init__()
-        loadUi(r'..\Resource\myprofile.ui', self)
+        super(Display, self).__init__()
+        loadUi(r'..\Resource\display.ui', self)
         self.backButton.clicked.connect(self.backtoHome)
-        user = m.db.child('Users').get()
-        for users in user.each():
-            if users.val()['id'] == m.id:
-                datum = [users.val()]
 
+        # data = [{'Age': '22', 'Blood Group': 'A+', 'Location': 'Kolkata', 'Name': 'Rahul',
+        #          'Phone Number': '9708942540'},
+        #         {'Age': '32', 'Blood Group': 'O+', 'Location': 'Ranchi', 'Name': 'Aman', 'Phone Number': '1234567890'}]
+        data = req.lis
         row = 0
-        self.tableWidget.setRowCount(len(datum))
-        for person in datum:
+        self.tableWidget.setRowCount(len(data))
+        for person in data:
             self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem(person['Name']))
             self.tableWidget.setItem(row, 1, QtWidgets.QTableWidgetItem(person['Age']))
             self.tableWidget.setItem(row, 2, QtWidgets.QTableWidgetItem(person['Blood Group']))
@@ -32,6 +29,6 @@ class MyProfile(QDialog):
             row = row + 1
 
     def backtoHome(self):
-        home = h.Home()
-        m.widget.addWidget(home)
+        request = req.RequestBlood()
+        m.widget.addWidget(request)
         m.widget.setCurrentIndex(m.widget.currentIndex() + 1)
