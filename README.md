@@ -1,4 +1,9 @@
 # Blood-Donation-Management-System
+![](https://img.shields.io/badge/python-3.x-blue?logo=python&logoColor=orange&labelColor=black)
+![](https://img.shields.io/badge/License-MIT-green?labelColor=black)
+![](https://img.shields.io/badge/Tag-v1.0-blue?labelColor=black)
+
+
 Blood Donation Management System using PyQt5 and firebase.
 
 ### About
