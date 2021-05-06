@@ -2,6 +2,7 @@
 ![](https://img.shields.io/badge/python-3.x-blue?logo=python&logoColor=orange&labelColor=black)
 ![](https://img.shields.io/badge/License-MIT-green?labelColor=black)
 ![](https://img.shields.io/badge/Tag-v1.0-blue?labelColor=black)
+![](https://img.shields.io/badge/Platfrom-desktop-green?labelColor=black)
 
 
 Blood Donation Management System using PyQt5 and firebase.
@@ -27,11 +28,24 @@ Included:
 - PyCharm IDE
 - Qt Designer
 
+**[Click here](https://github.com/ayushkumar-25/Blood-Donation-Management-System/blob/main/Sample/project%20expo%20final.pdf) to get the project report.** <br>
+
 ### Preview:
 <img src="https://github.com/ayushkumar-25/Blood-Donation-Management-System/blob/main/UI/createacc.png?raw=true" alt="Splash Screen" width="200" height="300"/> <img
 src="https://github.com/ayushkumar-25/Blood-Donation-Management-System/blob/main/UI/login.png?raw=true" alt="Splash Screen" width="200" height="300"/>
 <img src="https://github.com/ayushkumar-25/Blood-Donation-Management-System/blob/main/UI/home.png?raw=true" alt="Splash Screen" width="200" height="300"/>
 <img src="https://github.com/ayushkumar-25/Blood-Donation-Management-System/blob/main/UI/requestblood.png?raw=true" alt="Splash Screen" width="200" height="300"/>
 <img src="https://github.com/ayushkumar-25/Blood-Donation-Management-System/blob/main/UI/resetpass.png?raw=true" alt="Splash Screen" width="200" height="300"/>
+
+
+#
+
+**Feedbacks are welcomed:** <br>
+[![](https://img.shields.io/badge/Gmail-ayush2608%40gmail.com-red?logo=Gmail&logoColor=Red&labelColor=black)](mailto:ayush2608@gmail.com)
+[![](https://img.shields.io/badge/Telegram-ayushkumar25-blue?logo=Telegram&labelColor=black)](https://t.me/ayushkumar25) <br>
+
+#
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 
