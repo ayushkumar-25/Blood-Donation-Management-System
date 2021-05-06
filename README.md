@@ -9,8 +9,7 @@
 Blood Donation Management System using PyQt5 and firebase.
 
 ### About
-“Blood Donation Management System” is a desktop application to collect or donate blood easily. The purpose of this application is to facilitate "blood donor" and
-"blood requestor" a single platform to have seamless experience and to save crucial time of a patient.
+“Blood Donation Management System” is a desktop application to collect or donate blood easily. This application aims to facilitate "blood donor" and "blood requestor" a single platform to have a seamless experience and save the crucial time of a patient.
 
 ### Features
 Easy contact between blood donor and blood recipient through this application.<br>
