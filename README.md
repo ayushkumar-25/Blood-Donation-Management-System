@@ -5,6 +5,7 @@
 ![](https://img.shields.io/badge/Platfrom-desktop-green?labelColor=black)
 
 
+
 Blood Donation Management System using PyQt5 and firebase.
 
 ### About
@@ -40,7 +41,16 @@ src="https://github.com/ayushkumar-25/Blood-Donation-Management-System/blob/main
 
 #
 
-**Feedbacks are welcomed:** <br>
+### Next Updates 
+
+| To Do                     |
+|---------------------------|
+| 1. Mobile Application     |
+| 2. GPS Integration        |
+
+#
+
+**Get me on:** <br>
 [![](https://img.shields.io/badge/Gmail-ayush2608%40gmail.com-red?logo=Gmail&logoColor=Red&labelColor=black)](mailto:ayush2608@gmail.com)
 [![](https://img.shields.io/badge/Telegram-ayushkumar25-blue?logo=Telegram&labelColor=black)](https://t.me/ayushkumar25) <br>
 
